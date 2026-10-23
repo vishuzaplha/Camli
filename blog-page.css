@@ -158,8 +158,10 @@ body.journal-page {
 }
 
 .soft-section {
-  margin-inline: calc((min(1180px, calc(100vw - 3rem)) - 100vw) / 2);
-  padding-inline: max(1.5rem, calc((100vw - min(1180px, calc(100vw - 3rem))) / 2));
+  /* Keep this panel inside the content column. The previous 100vw-based
+     margins included the scrollbar width and created horizontal overflow. */
+  margin-inline: 0;
+  padding-inline: clamp(1.5rem, 4vw, 3rem);
   background: #eef2f6;
 }
 

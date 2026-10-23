@@ -14,14 +14,13 @@ loadComponent("navbar.html","navbar",() => {
   
   const menuBtn = document.getElementById("menu-btn");
   const navOptions = document.getElementById("nav-bar-options");
-  const pageContent = document.getElementById("page-content");
-  const homepage = document.getElementById("brand");
+  const pageContent = document.getElementById("page-content") || document.getElementById("tools-main");
   
   // MENU TOGGLE
   menuBtn.addEventListener("click", () => {
       navOptions.classList.toggle("active");
       menuBtn.classList.toggle("active");
-      pageContent.classList.toggle("blur");
+      pageContent?.classList.toggle("blur");
 
 
      document.addEventListener("pointerdown", (e) => {
@@ -32,7 +31,7 @@ loadComponent("navbar.html","navbar",() => {
     ) {
         navOptions.classList.remove("active");
         menuBtn.classList.remove("active");
-        pageContent.classList.remove("blur");
+        pageContent?.classList.remove("blur");
     }
 
     });
@@ -40,17 +39,9 @@ loadComponent("navbar.html","navbar",() => {
    window.addEventListener("scroll", () => {
     navOptions.classList.remove("active");
     menuBtn.classList.remove("active");
-    pageContent.classList.remove("blur");
+    pageContent?.classList.remove("blur");
   });
   });
-
-    homepage.addEventListener('click', () => {
-         window.location.href = brand.getAttribute('href');
-        
-    });
-
- 
-
 
 })
 

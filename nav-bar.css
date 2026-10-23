@@ -38,6 +38,8 @@ ul{
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: inherit;
+    cursor: pointer;
     /* justify-content: center; */
     position: relative;
     transition: 400ms;
