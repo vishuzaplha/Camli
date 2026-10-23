@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Camli tools for breathing, sound, focus, sleep and mood."
+    >
+
+    <title>Tools | Camli</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="mode-change.css">
+    <link rel="stylesheet" href="tools.css">
+</head>
+
+<body class="tools-page">
+
+    <div id="navbar"></div>
+    <div id="mode-changer"></div>
+
+
+    <main id="tools-main">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <header class="tools-hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    CAMLI TOOLS
+                </p>
+
+                <h1>
+                    A tool for the mood
+                    <br>
+                    <em>you are in.</em>
+                </h1>
+
+                <p class="hero-copy">
+                    Breathe. Listen. Mix. Reset.
+                    Everything stays in one place.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             MOOD STATUS
+        ========================== -->
+
+        <section class="mood-panel panel">
+
+            <div>
+
+                <p class="section-kicker">
+                    YOUR MOOD
+                </p>
+
+                <h2>
+                    Let Camli meet you where you are.
+                </h2>
+
+                <p id="emotion-status">
+                    No mood detected yet.
+                </p>
+
+            </div>
+
+            <div class="mood-actions">
+
+                <button
+                    class="btn primary"
+                    id="detect-emotion-top"
+                    type="button"
+                >
+                    Detect my mood
+                </button>
+
+                <button
+                    class="btn secondary"
+                    id="clear-emotion-top"
+                    type="button"
+                >
+                    Clear / re-detect
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RECOMMENDATION
+        ========================== -->
+
+        <section
+            class="recommendation panel"
+            id="recommendations"
+            hidden
+        >
+
+            <div class="recommendation-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <p class="section-kicker">
+                    RECOMMENDED FOR YOU
+                </p>
+
+                <h2 id="recommendation-title">
+                    Your next reset
+                </h2>
+
+                <p id="recommendation-text"></p>
+
+                <div class="recommendation-actions">
+
+                    <button
+                        class="btn primary"
+                        id="recommend-breathe"
+                        type="button"
+                    >
+                        Start breathing
+                    </button>
+
+                    <button
+                        class="btn secondary"
+                        id="recommend-sound"
+                        type="button"
+                    >
+                        Play sound
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SHARED TIMER
+        ========================== -->
+
+        <section
+            class="panel timer-panel"
+            aria-labelledby="timer-title"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-kicker">
+                        SHARED TIMER
+                    </p>
+
+                    <h2 id="timer-title">
+                        Give your reset a finish line.
+                    </h2>
+
+                </div>
+
+                <div
+                    class="timer-display"
+                    id="timer-display"
+                >
+                    05:00
+                </div>
+
+            </div>
+
+
+            <div class="timer-controls">
+
+                <select
+                    id="timer-preset"
+                    aria-label="Timer duration"
+                >
+
+                    <option value="300">
+                        5 minutes
+                    </option>
+
+                    <option value="600">
+                        10 minutes
+                    </option>
+
+                    <option value="900">
+                        15 minutes
+                    </option>
+
+                    <option value="1500">
+                        25 minutes
+                    </option>
+
+                    <option value="1800">
+                        30 minutes
+                    </option>
+
+                    <option value="2700">
+                        45 minutes
+                    </option>
+
+                    <option value="3600">
+                        60 minutes
+                    </option>
+
+                </select>
+
+
+                <button
+                    class="btn primary"
+                    id="timer-start"
+                    type="button"
+                >
+                    Start
+                </button>
+
+
+                <button
+                    class="btn secondary"
+                    id="timer-reset"
+                    type="button"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+
+            <p
+                class="helper"
+                id="timer-note"
+            >
+                The timer can run while you use another tool.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             BREATHING
+        ========================== -->
+
+        <section
+            class="tool-section"
+            id="gentle-breath"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-kicker">
+                        01 / BREATHE
+                    </p>
+
+                    <h2>
+                        Gentle Breath
+                    </h2>
+
+                    <p
+                        class="section-copy"
+                        id="breathing-recommendation"
+                    >
+                        Choose a rhythm and follow the circle.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="breathing-layout">
+
+
+                <!-- Breathing visual -->
+
+                <div class="breathing-visual-card panel">
+
+                    <div class="breathing-orb-wrap">
+
+                        <div
+                            class="breathing-orb"
+                            id="breathing-orb"
+                        >
+
+                            <span id="breathing-phase">
+                                Ready
+                            </span>
+
+                            <strong id="breathing-countdown">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="breathing-info">
+
+                        <span id="selected-breathing-name">
+                            Calm
+                        </span>
+
+                        <span id="breathing-state">
+                            Not running
+                        </span>
+
+                    </div>
+
+
+                    <div class="control-row">
+
+                        <button
+                            class="btn primary"
+                            id="breathing-start"
+                            type="button"
+                        >
+                            Start
+                        </button>
+
+                        <button
+                            class="btn secondary"
+                            id="breathing-reset"
+                            type="button"
+                        >
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Breathing styles -->
+
+                <div class="panel breathing-styles">
+
+                    <p class="mini-title">
+                        Choose your rhythm
+                    </p>
+
+                    <div id="breathing-style-list"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SOUNDS
+        ========================== -->
+
+        <section
+            class="tool-section"
+            id="sounds"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-kicker">
+                        02 / SOUND
+                    </p>
+
+                    <h2>
+                        Ambient Sounds
+                    </h2>
+
+                    <p class="section-copy">
+                        Layer up to six sounds.
+                        Switching tools will not stop them.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="btn secondary"
+                    id="stop-all-sounds-top"
+                    type="button"
+                >
+                    Stop all
+                </button>
+
+            </div>
+
+
+            <div
+                class="sound-grid"
+                id="sound-grid"
+            ></div>
+
+
+
+            <!-- Ambient presets -->
+
+            <div class="subsection panel">
+
+                <div class="subsection-heading">
+
+                    <div>
+
+                        <p class="mini-title">
+                            Ambient presets
+                        </p>
+
+                        <p class="helper">
+                            A preset replaces the current session.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="preset-buttons"
+                    id="built-in-ambient-presets"
+                >
+
+                    <button
+                        class="preset-chip"
+                        type="button"
+                        data-ambient-preset="Rain"
+                    >
+                        Rain
+                    </button>
+
+                    <button
+                        class="preset-chip"
+                        type="button"
+                        data-ambient-preset="Forest"
+                    >
+                        Forest
+                    </button>
+
+                    <button
+                        class="preset-chip"
+                        type="button"
+                        data-ambient-preset="Storm"
+                    >
+                        Storm
+                    </button>
+
+                    <button
+                        class="preset-chip"
+                        type="button"
+                        data-ambient-preset="Cafe"
+                    >
+                        Cafe
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Create ambient preset -->
+
+            <div class="subsection panel">
+
+                <div class="subsection-heading">
+
+                    <div>
+
+                        <p class="mini-title">
+                            Create an ambient preset
+                        </p>
+
+                        <p class="helper">
+                            Select up to six sounds and choose their starting volume.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="preset-builder-grid"
+                    id="ambient-builder"
+                ></div>
+
+
+                <div class="save-row">
+
+                    <input
+                        id="ambient-preset-name"
+                        type="text"
+                        maxlength="40"
+                        placeholder="Preset name"
+                    >
+
+                    <button
+                        class="btn primary"
+                        id="save-ambient-preset"
+                        type="button"
+                    >
+                        Save preset
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="ambient-save-error"
+                    class="form-error"
+                    role="alert"
+                ></div>
+
+            </div>
+
+
+
+            <!-- Saved ambient presets -->
+
+            <div class="subsection panel">
+
+                <div class="subsection-heading">
+
+                    <p class="mini-title">
+                        Saved ambient presets
+                    </p>
+
+                </div>
+
+                <div
+                    id="saved-ambient-presets"
+                    class="saved-presets"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MAGIC MIX
+        ========================== -->
+
+        <section
+            class="tool-section"
+            id="magic-mix"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-kicker">
+                        03 / MAGIC MIX
+                    </p>
+
+                    <h2>
+                        Build a mood in one tap.
+                    </h2>
+
+                    <p class="section-copy">
+                        Magic Mix can combine breathing with several sounds.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Built in mixes -->
+
+            <div class="magic-built-ins panel">
+
+                <p class="mini-title">
+                    Built-in mixes
+                </p>
+
+
+                <div class="magic-preset-grid">
+
+                    <button
+                        class="magic-card"
+                        type="button"
+                        data-magic="calm"
+                    >
+
+                        <span>☁</span>
+
+                        <strong>
+                            Calm
+                        </strong>
+
+                        <small>
+                            Breathing + White Noise + Wind
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="magic-card"
+                        type="button"
+                        data-magic="focus"
+                    >
+
+                        <span>◌</span>
+
+                        <strong>
+                            Focus
+                        </strong>
+
+                        <small>
+                            Breathing + Forest + Rain
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="magic-card"
+                        type="button"
+                        data-magic="sleep"
+                    >
+
+                        <span>☾</span>
+
+                        <strong>
+                            Sleep
+                        </strong>
+
+                        <small>
+                            Breathing + Fireplace + Ocean
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="magic-card"
+                        type="button"
+                        data-magic="relax"
+                    >
+
+                        <span>✧</span>
+
+                        <strong>
+                            Relax
+                        </strong>
+
+                        <small>
+                            Breathing + Forest + Wind
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Custom Magic Mix -->
+
+            <div class="magic-builder panel">
+
+                <div class="builder-top">
+
+                    <div>
+
+                        <p class="mini-title">
+                            Custom Magic Mix
+                        </p>
+
+                        <p class="helper">
+                            Maximum 6 sounds.
+                            Each sound has its own level.
+                        </p>
+
+                    </div>
+
+
+                    <label class="switch-label">
+
+                        <input
+                            type="checkbox"
+                            id="magic-breathing"
+                            checked
+                        >
+
+                        <span>
+                            Include breathing
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="magic-breathing-options">
+
+                    <label for="magic-breathing-style">
+                        Breathing style
+                    </label>
+
+                    <select id="magic-breathing-style"></select>
+
+                </div>
+
+
+                <div
+                    class="magic-sound-list"
+                    id="magic-sound-list"
+                ></div>
+
+
+                <div class="save-row">
+
+                    <input
+                        id="magic-preset-name"
+                        type="text"
+                        maxlength="40"
+                        placeholder="Magic Mix name"
+                    >
+
+                    <button
+                        class="btn primary"
+                        id="save-magic-preset"
+                        type="button"
+                    >
+                        Save Magic Mix
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="magic-save-error"
+                    class="form-error"
+                    role="alert"
+                ></div>
+
+            </div>
+
+
+
+            <!-- Saved Magic Mixes -->
+
+            <div class="subsection panel">
+
+                <div class="subsection-heading">
+
+                    <p class="mini-title">
+                        Saved Magic Mixes
+                    </p>
+
+                </div>
+
+                <div
+                    id="saved-magic-presets"
+                    class="saved-presets"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             EMOTION
+        ========================== -->
+
+        <section
+            class="tool-section"
+            id="emotion-tool"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="section-kicker">
+                        04 / EMOTION
+                    </p>
+
+                    <h2>
+                        What are you feeling right now?
+                    </h2>
+
+                    <p class="section-copy">
+                        Answer all six questions.
+                        Camli uses your answers to detect the strongest current mood.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="emotion-layout">
+
+
+                <form
+                    class="emotion-form panel"
+                    id="emotion-form"
+                ></form>
+
+
+                <aside class="emotion-result panel">
+
+                    <div class="result-orb">
+                        ♡
+                    </div>
+
+                    <p class="section-kicker">
+                        RESULT
+                    </p>
+
+                    <h3 id="emotion-result-title">
+                        Not detected
+                    </h3>
+
+                    <p id="emotion-result-text">
+                        Answer the questions and press Detect my mood.
+                    </p>
+
+
+                    <button
+                        class="btn primary"
+                        id="detect-emotion"
+                        type="button"
+                    >
+                        Detect my mood
+                    </button>
+
+
+                    <button
+                        class="btn secondary"
+                        id="clear-emotion"
+                        type="button"
+                    >
+                        Clear / re-detect
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         BREATHING CHANGE MODAL
+    ========================== -->
+
+    <div
+        class="modal-backdrop"
+        id="breathing-modal"
+        hidden
+    >
+
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="breathing-modal-title"
+        >
+
+            <button
+                class="modal-close"
+                id="breathing-modal-close"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <p class="section-kicker">
+                BREATHING CHANGE
+            </p>
+
+            <h2 id="breathing-modal-title">
+                Your current breathing session is still active.
+            </h2>
+
+            <p>
+                Starting this new breathing style will stop
+                the current session and begin the new one.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    class="btn secondary"
+                    id="breathing-cancel"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="btn primary"
+                    id="breathing-confirm"
+                    type="button"
+                >
+                    OK, change it
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CURRENT AUDIO PRESET MODAL
+    ========================== -->
+
+    <div
+        class="modal-backdrop"
+        id="preset-modal"
+        hidden
+    >
+
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <button
+                class="modal-close"
+                id="preset-modal-close"
+                type="button"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <p class="section-kicker">
+                SAVE PRESET
+            </p>
+
+            <h2>
+                Make a preset from your current audio.
+            </h2>
+
+            <p>
+                Only sounds that are actively playing will be saved.
+            </p>
+
+
+            <input
+                id="current-audio-preset-name"
+                type="text"
+                maxlength="40"
+                placeholder="Preset name"
+            >
+
+
+            <div
+                id="current-audio-error"
+                class="form-error"
+                role="alert"
+            ></div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    class="btn secondary"
+                    id="preset-modal-cancel"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    class="btn primary"
+                    id="preset-modal-save"
+                    type="button"
+                >
+                    Save preset
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MIXER
+    ========================== -->
+
+    <div
+        class="mixer-panel"
+        id="mixer-panel"
+        aria-hidden="true"
+    >
+
+        <div class="mixer-header">
+
+            <div>
+
+                <p class="section-kicker">
+                    MIXER
+                </p>
+
+                <h2>
+                    Playing sounds
+                </h2>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="mixer-close"
+                type="button"
+                aria-label="Close mixer"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <label class="master-volume">
+
+            <span>
+                Master volume
+            </span>
+
+            <input
+                id="master-volume"
+                type="range"
+                min="0"
+                max="100"
+                value="100"
+            >
+
+            <strong id="master-volume-value">
+                100%
+            </strong>
+
+        </label>
+
+
+        <div id="mixer-list"></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        class="toast-area"
+        id="toast-area"
+        aria-live="polite"
+    ></div>
+
+
+
+    <!-- =========================
+         FIXED AUDIO BAR
+    ========================== -->
+
+    <div
+        class="audio-bar"
+        id="audio-bar"
+        hidden
+    >
+
+        <div
+            class="audio-bar-brand"
+            aria-label="Camli audio"
+        >
+
+            <span>
+                ♪
+            </span>
+
+            <strong>
+                CAMLI
+            </strong>
+
+        </div>
+
+
+        <button
+            class="bar-btn main-bar-btn"
+            id="audio-main-toggle"
+            type="button"
+            aria-label="Play or pause all"
+        >
+            ▶
+        </button>
+
+
+        <button
+            class="bar-btn"
+            id="audio-stop"
+            type="button"
+        >
+            ■
+        </button>
+
+
+        <button
+            class="bar-btn"
+            id="audio-make-preset"
+            type="button"
+        >
+            ＋ Preset
+        </button>
+
+
+        <button
+            class="bar-btn mixer-bar-btn"
+            id="audio-mixer"
+            type="button"
+        >
+            Mixer
+        </button>
+
+
+        <span
+            class="audio-count"
+            id="audio-count"
+        >
+            0 sounds
+        </span>
+
+    </div>
+
+
+    <script src="tools.js"></script>
+
+</body>
+</html>

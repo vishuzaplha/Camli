@@ -1,0 +1,260 @@
+/* ========================================================================== 
+   CALMLI DARK MODE
+   Applied by index.js with: <body class="dark-mode">
+   Palette source: color-palate.txt
+   ========================================================================== */
+
+body.dark-mode {
+    --bg-color: #0F1724;       /* Midnight Calm */
+    --accent-color: #1B2536;   /* Twilight Mist */
+    --lavender-color: #A996D8; /* Night Lavender */
+    --text-main: #E7EDF5;      /* Moonstone Text */
+    --text-muted: #AAB4C3;     /* Silver Whisper */
+    --btn-hover: #7EA8D6;      /* Moonlit Blue */
+    --card-bg: #1B2536;        /* Twilight Mist */
+
+    background-color: #0F1724;
+    color: #E7EDF5;
+}
+
+/* Shared controls and navigation */
+body.dark-mode #nav-bar-div,
+body.dark-mode #nav-bar-options,
+body.dark-mode #theme-toggle,
+body.dark-mode #hero-more {
+    background-color: #1B2536;
+    border-color: #2B3445;
+}
+
+body.dark-mode #nav-bar-div {
+    border-bottom-color: #2B3445;
+    transition: 400ms ease;
+}
+
+/* The mobile drawer is a separate surface from the navbar. Match its colour
+   transition to the navbar so neither background jumps during theme changes. */
+#nav-bar-options {
+    transition:
+        right 400ms ease,
+        visibility 400ms ease,
+        background-color 400ms ease,
+        border-color 400ms ease ;
+}
+
+
+body.dark-mode #logo,
+body.dark-mode #logoname,
+body.dark-mode .nav-bar-options,
+body.dark-mode #text-area,
+body.dark-mode .section-heads,
+body.dark-mode .tool-text,
+body.dark-mode .blog-card-content h3,
+body.dark-mode .faq-question,
+body.dark-mode .faq-question i,
+body.dark-mode .about-heads,
+body.dark-mode .tools-main-heading,
+body.dark-mode .tool-card h3,
+body.dark-mode .tools-motivation-box h2,
+body.dark-mode .about-hero-cta .cta .title,
+body.dark-mode .circle-text h3,
+body.dark-mode .circle-icon-wrapper,
+body.dark-mode .img-area-abt-icon {
+    color: #E7EDF5;
+}
+
+body.dark-mode .nav-bar-options:hover,
+body.dark-mode #hero-more:hover {
+    color: #7EA8D6;
+}
+
+body.dark-mode #menu-btn span {
+    background-color: #E7EDF5;
+}
+
+body.dark-mode #theme-toggle {
+    color: #7EA8D6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode #theme-toggle-mobile,
+body.dark-mode #breathe-btn,
+body.dark-mode #hero-cta {
+    background-color: #7EA8D6;
+    border-color: #7EA8D6;
+    color: #0F1724;
+}
+
+body.dark-mode #theme-toggle-mobile:hover,
+body.dark-mode #breathe-btn:hover,
+body.dark-mode #hero-cta:hover {
+    background-color: #A996D8;
+    border-color: #A996D8;
+}
+
+body.dark-mode #hero-more {
+    color: #E7EDF5;
+}
+
+/* Home page */
+body.dark-mode #hero-section,
+body.dark-mode .faq-sec {
+    background-color: #0F1724;
+}
+
+body.dark-mode .sub-hero-lines,
+body.dark-mode .secondary-headings,
+body.dark-mode .blog-card-content p,
+body.dark-mode .faq-answers p {
+    color: #AAB4C3;
+}
+
+body.dark-mode #image-area {
+    background-image: url("image/hero-meditation-dark.png");
+}
+
+body.dark-mode .main-tools {
+    background-color: #1B2536;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+body.dark-mode #tools1 { color: #7BC7AE !important; border-color: #7BC7AE; }
+body.dark-mode #tools2 { color: #A996D8 !important; border-color: #A996D8; }
+body.dark-mode #tools3 { color: #7EA8D6 !important; border-color: #7EA8D6; }
+
+body.dark-mode .blog-card,
+body.dark-mode .faq-accordian {
+    background-color: #1B2536;
+    border-color: #2B3445;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+}
+
+body.dark-mode .blog-card-content a.stretched-link {
+    background-color: #0F1724;
+    border-color: #2B3445;
+    color: #E7EDF5 !important;
+}
+
+body.dark-mode .blog-card:hover .blog-card-content a.stretched-link {
+    background-color: #7EA8D6;
+    color: #0F1724 !important;
+}
+
+body.dark-mode .faq-accordian.active {
+    background-color: #2B3445;
+    border-color: #7EA8D6;
+}
+
+body.dark-mode .faq-accordian.active .faq-icon {
+    color: #7EA8D6;
+}
+
+/* Dark blog artwork */
+body.dark-mode .blog-img-1, body.dark-mode #midnight-reset { background-image: url("image/dark-mode-12-Photoroom.png"); }
+body.dark-mode .blog-img-2 { background-image: url("image/dark-mode-breathe-Photoroom.png"); }
+body.dark-mode .blog-img-3 { background-image: url("image/dark-mode-focus-Photoroom.png"); }
+body.dark-mode .blog-img-4 { background-image: url("image/dark-mode-handle-Photoroom.png"); }
+body.dark-mode .blog-img-5 { background-image: url("image/dark-mode-optimistic-Photoroom.png"); }
+body.dark-mode .blog-img-6 { background-image: url("image/dark-mode-unknown-Photoroom.png"); }
+body.dark-mode .blog-img-7 { background-image: url("image/DARK-INTERNET&MIND.png"); }
+body.dark-mode .blog-img-8 { background-image: url("image/DARK-LOSING-INTEREEST.png"); }
+body.dark-mode .blog-img-9 { background-image: url("image/DARK-MINDROT.png"); }
+body.dark-mode .blog-img-10 { background-image: url("image/dark-mode-ambient-sound.png"); }
+body.dark-mode .blog-img-11 { background-image: url("image/satisfying-visuals-dark-mode.png"); }
+body.dark-mode .blog-img-12 { background-image: url("image/dark-mode-tools&mood.png"); }
+body.dark-mode .blog-img-13 { background-image: url("image/dark-mode-switch-mood.png"); }
+body.dark-mode .blog-img-14 { background-image: url("image/dark-mode-dopamine-reset.png"); }
+body.dark-mode .blog-img-15 { background-image: url("image/dark-mode-camli&peace.png"); }
+
+/* Blog listing page */
+body.dark-mode .blog-hero {
+    background-color: #0F1724;
+    color: #E7EDF5;
+}
+
+body.dark-mode .hero-badge {
+    background-color: #A996D8;
+    color: #0F1724;
+}
+
+body.dark-mode .hero-subtitle,
+body.dark-mode .tag-label {
+    color: #AAB4C3;
+}
+
+body.dark-mode .tag-link {
+    background-color: #1B2536;
+    color: #E7EDF5;
+}
+
+body.dark-mode .badge-red,
+body.dark-mode .badge-blue,
+body.dark-mode .badge-green,
+body.dark-mode .badge-violet,
+body.dark-mode .badge-yellow {
+    background-color: #2B3445;
+    color: #E7EDF5;
+    border: 1px solid #C9B8A5;
+}
+
+/* About page */
+body.dark-mode .about-camli,
+body.dark-mode .about-compos,
+body.dark-mode .about-content {
+    background-color: #0F1724;
+}
+
+body.dark-mode .about-us-hero-text {
+    color: #2B3445;
+}
+
+body.dark-mode .leaf {
+    background-color: #7EA8D6 !important;
+    filter: drop-shadow(0 0 10px rgba(126, 168, 214, 0.45))
+            drop-shadow(0 0 50px rgba(169, 150, 216, 0.25));
+}
+
+body.dark-mode .about-hero-cta .cta,
+body.dark-mode .abt-image-area .circles,
+body.dark-mode .tool-card,
+body.dark-mode .tools-motivation-box {
+    background-color: #1B2536;
+    border-color: #2B3445;
+}
+
+body.dark-mode .about-hero-cta .cta .para,
+body.dark-mode .about-headings,
+body.dark-mode .circle-text p,
+body.dark-mode .tools-sub-heading,
+body.dark-mode .tool-card p,
+body.dark-mode .tools-motivation-box p {
+    color: #AAB4C3;
+}
+
+body.dark-mode .circle-1, body.dark-mode .border-lavender { border-color: #A996D8; }
+body.dark-mode .circle-2 { border-color: #7EA8D6; }
+body.dark-mode .circle-3, body.dark-mode .border-sand { border-color: #C9B8A5; }
+body.dark-mode .circle-4, body.dark-mode .border-mint { border-color: #7BC7AE; }
+body.dark-mode .color-lavender { color: #A996D8; }
+body.dark-mode .color-mint { color: #7BC7AE; }
+body.dark-mode .color-sand { color: #C9B8A5; }
+
+body.dark-mode .camli-primary-btn {
+    background-color: #7EA8D6;
+    color: #0F1724;
+}
+
+body.dark-mode .camli-primary-btn:hover {
+    background-color: #A996D8;
+}
+
+/* Footer variables are scoped in index.css, so reset them on the component. */
+body.dark-mode .camli-footer {
+    --bg-color: #1B2536;
+    --text-main: #E7EDF5;
+    --text-muted: #AAB4C3;
+    --link-hover: #7EA8D6;
+    --divider-color: #2B3445;
+
+    background-color: #1B2536;
+    border-top-color: #2B3445;
+}

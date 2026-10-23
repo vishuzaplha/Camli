@@ -1,0 +1,385 @@
+/* ==========================================
+   1. ROOT VARIABLES & VARIABLES OVERRIDES
+   ========================================== */
+:root {
+  --journal-bg: #f7f8fb;
+  --journal-panel: #fff;
+  --journal-text: #4f5b66;
+  --journal-muted: #6b7280;
+  --journal-line: #dce3eb;
+  --journal-blue: #7ea8d6;
+  --journal-lavender: #c9b7e8;
+  --journal-sage: #bfe6d3;
+}
+
+body.dark-mode.journal-page {
+  --journal-bg: #0f1724;
+  --journal-panel: #1b2536;
+  --journal-text: #e7edf5;
+  --journal-muted: #aab4c3;
+  --journal-line: #2b3445;
+  --journal-blue: #7ea8d6;
+  --journal-lavender: #a996d8;
+  --journal-sage: #7bc7ae;
+}
+
+/* ==========================================
+   2. BASE & GENERAL LAYOUT
+   ========================================== */
+body.journal-page {
+  background: var(--journal-bg);
+  color: var(--journal-text);
+  font-family: "DM Sans", sans-serif;
+}
+
+.journal-page #page-content {
+  display: block;
+  padding-top: 6rem;
+}
+
+.journal-content {
+  width: min(1180px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+/* ==========================================
+   3. HERO SECTION
+   ========================================== */
+.journal-hero {
+  min-height: calc(100vh - 6rem);
+  display: grid;
+  place-content: center;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(201, 183, 232, 0.42), transparent 27%),
+    radial-gradient(circle at 85% 35%, rgba(191, 230, 211, 0.58), transparent 24%),
+    var(--journal-bg);
+}
+
+.journal-hero h1 {
+  margin: 1.1rem 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  font-size: clamp(3.1rem, 7vw, 6.3rem);
+  line-height: 0.97;
+}
+
+.journal-hero h1 em {
+  color: var(--journal-blue);
+}
+
+.journal-hero > p:not(.journal-kicker) {
+  max-width: 560px;
+  margin: 1.8rem auto 0;
+  color: var(--journal-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.journal-scroll {
+  margin-top: 2.7rem;
+  color: var(--journal-text);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.journal-scroll span {
+  display: inline-block;
+  width: 36px;
+  height: 1px;
+  margin: 0 0.6rem 4px 0;
+  background: var(--journal-blue);
+}
+
+/* ==========================================
+   4. SECTIONS & LAYOUT GRIDS
+   ========================================== */
+.journal-section {
+  padding: clamp(4.5rem, 9vw, 8rem) 0;
+  border-top: 1px solid var(--journal-line);
+}
+
+.journal-section h2 {
+  margin: 1.1rem 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  font-size: clamp(2.3rem, 4.7vw, 4.5rem);
+  line-height: 1.04;
+}
+
+.featured-section {
+  border: 0;
+}
+
+.section-intro {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2rem;
+  margin-bottom: 2.75rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+}
+
+.section-note {
+  max-width: 280px;
+  margin: 0;
+  color: var(--journal-muted);
+  line-height: 1.6;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.5rem;
+}
+
+.side-stories {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.soft-section {
+  margin-inline: calc((min(1180px, calc(100vw - 3rem)) - 100vw) / 2);
+  padding-inline: max(1.5rem, calc((100vw - min(1180px, calc(100vw - 3rem))) / 2));
+  background: #eef2f6;
+}
+
+body.dark-mode.journal-page .soft-section {
+  background: #141e2d;
+}
+
+/* ==========================================
+   5. CARDS (JOURNAL, BLOG, COMPACT)
+   ========================================== */
+.journal-kicker,
+.section-label,
+.card-tag {
+  margin: 0;
+  color: var(--journal-blue);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.journal-card {
+  overflow: hidden;
+  border: 1px solid var(--journal-line);
+  border-radius: 1.1rem;
+  background: var(--journal-panel);
+  transition: transform 250ms ease, box-shadow 250ms ease, background-color 400ms;
+}
+
+.journal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(31, 50, 72, 0.11);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-position: center;
+  background-size: cover;
+}
+
+.feature-card .card-image {
+  aspect-ratio: 16 / 11;
+}
+
+.card-content {
+  padding: 1.45rem;
+}
+
+.card-content h3 {
+  margin: 0.8rem 0 0.45rem;
+  color: var(--journal-text);
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.card-content p {
+  min-height: 3.1em;
+  margin: 0;
+  color: var(--journal-muted);
+  font-size: 0.93rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.card-content .stretched-link {
+  display: inline-block;
+  margin-top: 1.35rem;
+  padding: 0;
+  background: transparent;
+  color: var(--journal-text) !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-content .stretched-link i {
+  margin-left: 0.3rem;
+  color: var(--journal-blue);
+}
+
+/* Compact Cards */
+.compact-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: stretch;
+}
+
+.compact-card .card-image {
+  aspect-ratio: auto;
+  min-height: 100%;
+}
+
+.compact-card .card-content {
+  padding: 1.2rem;
+}
+
+.compact-card .card-content h3 {
+  margin-top: 0.55rem;
+  font-size: 1rem;
+}
+
+.compact-card .card-content p {
+  min-height: 0;
+  font-size: 0.82rem;
+}
+
+.compact-card .card-content .stretched-link {
+  margin-top: 0.8rem;
+}
+
+/* Blog Cards */
+.journal-page .blog-card {
+  background: var(--journal-panel);
+  border-color: var(--journal-line);
+}
+
+.journal-page .blog-card-content h3 {
+  color: var(--journal-text);
+}
+
+.journal-page .blog-card-content p {
+  color: var(--journal-muted);
+}
+
+.journal-page .blog-card-content a.stretched-link,
+.journal-page .blog-card:hover .blog-card-content a.stretched-link {
+  background: transparent;
+  color: var(--journal-text) !important;
+  border: 0;
+  transform: none;
+}
+
+/* ==========================================
+   6. BACKGROUND IMAGES
+   ========================================== */
+.blog-img-7 { background-image: url("image/INTERNET&MIND.png"); }
+.blog-img-8 { background-image: url("image/LOSING-INTEREST.png"); }
+.blog-img-9 { background-image: url("image/MINDROT.png"); }
+.blog-img-10 { background-image: url("image/ambient-music.png"); }
+.blog-img-11 { background-image: url("image/satisfying-visuals.png"); }
+.blog-img-12 { background-image: url("image/tools&mood.png"); }
+.blog-img-13 { background-image: url("image/switch-mood.png"); }
+.blog-img-14 { background-image: url("image/dopamine-reset.png"); }
+.blog-img-15 { background-image: url("image/camli&peace.png"); }
+
+/* ==========================================
+   7. MEDIA QUERIES
+   ========================================== */
+@media (max-width: 800px) {
+  .journal-page #page-content {
+    padding-top: 5.5rem;
+  }
+  .journal-hero {
+    min-height: calc(100vh - 5.5rem);
+  }
+  .journal-content {
+    width: min(100% - 2rem, 1180px);
+  }
+  .section-intro,
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-header {
+    display: block;
+  }
+  .section-note {
+    margin-top: 1rem;
+  }
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-card .card-image {
+    aspect-ratio: 16 / 9;
+  }
+  .side-stories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .compact-card {
+    display: block;
+  }
+  .compact-card .card-image {
+    aspect-ratio: 16 / 10;
+  }
+  .soft-section {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .journal-hero {
+    min-height: calc(100vh - 5.5rem);
+  }
+  .journal-hero h1 {
+    font-size: 3.2rem;
+  }
+  .journal-section {
+    padding: 4rem 0;
+  }
+  .story-grid,
+  .side-stories {
+    grid-template-columns: 1fr;
+  }
+  .compact-card {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+  .compact-card .card-image {
+    aspect-ratio: auto;
+  }
+  .section-header h2 {
+    font-size: 2.3rem;
+  }
+  .card-content {
+    padding: 1.25rem;
+  }
+}
+
+/* The hero has its own layered background, so give it the same theme pace
+   as the global page background instead of letting it switch immediately. */
+.journal-hero {
+  transition: background-color 400ms ease, color 400ms ease;
+}

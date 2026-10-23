@@ -1,0 +1,75 @@
+
+Color Name
+Hex Code
+Where to Use It
+Purpose / Effect
+Moonlight White
+#F7F8FB
+Main background, page base, large empty spaces
+Creates a peaceful, airy, uncluttered feeling
+Breath Sky
+#EBF0F6 
+Primary buttons, links, highlights, active states
+Encourages calm focus like slow breathing
+Dream Lavender
+#C9B7E8
+Meditation sections, sleep content blocks, soft highlights
+Promotes relaxation and sleep readiness
+Quiet Mint
+#BFE6D3
+Success messages, calming indicators, wellness stats
+Gives fresh, healing, “reset” feeling
+Sleep Sand
+#E9DDCF
+Cards, panels, containers, secondary backgrounds
+Adds warmth and comfort without heaviness
+Gentle Slate
+#4F5B66
+Main text, headings, icons
+Soft readable contrast without harsh black
+Button hover #8FB7DD
+
+#6b7280  secondary text
+
+Dark Mode Palette
+Color Name
+Hex Code
+Where to Use It
+Purpose / Effect
+Midnight Calm
+#0F1724
+Main background, page base
+Deep night-sky tone that feels safe and quiet without the harshness of pure black
+Twilight Mist
+#1B2536
+Cards, panels, containers
+Creates gentle separation while maintaining a soft, immersive atmosphere
+Moonlit Blue
+#7EA8D6
+Primary buttons, links, active states
+Feels like cool moonlight, guiding attention without creating stress
+Night Lavender
+#A996D8
+Meditation content, sleep sections, highlights
+Encourages relaxation and emotional comfort
+Healing Sage
+#7BC7AE
+Success states, progress indicators, wellness stats
+Signals restoration, growth, and calm recovery
+Soft Sand Glow
+#C9B8A5
+Secondary accents, subtle borders, decorative elements
+Adds warmth and human comfort to prevent the UI from feeling cold
+Moonstone Text
+#E7EDF5              ///////////// MAIN TEXT
+Main text, headings
+High readability with a gentle glow-like appearance
+Silver Whisper
+#AAB4C3
+Secondary text, captions, metadata
+Keeps hierarchy clear without strong contrast
+Dream Shadow
+#2B3445
+Hover states, dividers, inactive elements
+Adds depth while preserving serenity
+

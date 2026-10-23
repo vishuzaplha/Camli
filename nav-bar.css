@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#nav-bar-div{
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 6rem;
+
+    padding: 0 3rem;
+
+    background-color: #F7F8FB;
+    border-bottom: 2px solid #505b6648;
+    transition: 400ms;
+}
+
+/* Logo Section */
+#brand{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* justify-content: center; */
+    position: relative;
+    transition: 400ms;
+    
+}
+
+
+#logo{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 99px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4F5B66;
+}
+
+#logoname{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4F5B66;
+}
+
+/* Navigation */
+#nav-bar-options{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-left: auto;
+    background-color: #F7F8FB;
+    transition: 400ms;
+}
+#nav-options{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-bar-options{
+    color: #4F5B66;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 400ms;
+    
+}
+
+.nav-bar-options:hover{
+    color: #A9C7E8;
+}
+
+.nav-bar-options:active{
+    color: #C9B7E8;
+}
+
+/* Button */
+#breathe-btn{
+    height: 3rem;
+    width: 8rem;
+
+    border: 1px solid #A9C7E8;
+    border-radius: 99px;
+
+    background-color: #A9C7E8;
+    color: #F7F8FB;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#breathe-btn:hover{
+    background-color: #8FB7DD;
+}
+#menu-btn{
+    position: absolute;
+    right: 22px;
+    display: none;
+    z-index: 1001;
+
+    width:  clamp(16px,6vw,1.5rem);
+    height:  clamp(16px,6vw,1.5rem);
+    
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    
+    
+    
+    
+}
+#menu-btn{
+    transition: 400ms ease;
+}
+
+#menu-btn span{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transform-origin: center;
+    z-index: 2000;
+    position: absolute;
+   
+   
+}
+
+
+
+#menu-btn span:nth-child(1) {
+    top: 0;
+}
+
+#menu-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#menu-btn span:nth-child(3) {
+    bottom: 0;
+}
+
+#menu-btn.active span:nth-child(1){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#menu-btn.active span:nth-child(2){
+    opacity: 0;
+}
+
+#menu-btn.active span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+
+/* FOR MOBILE */
+
+
+@media (max-width: 950px){
+   
+
+    #nav-bar-options{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* font-size: 8px; */
+        width: 250px;
+        height: 100vh;
+
+        background-color: #F7F8FB;
+        border-bottom: 1px solid #E9DDCF;
+        box-sizing: border-box;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 16px;
+        padding-top: 6rem;
+        gap: 2rem;
+
+        pointer-events: none;
+        visibility: hidden;
+        
+        transition: 0.4s ease ;
+    }
+    
+    #nav-bar-options.active{
+        right: 0;
+
+        pointer-events: auto;
+        visibility: visible;
+    }
+    .nav-bar-options{
+     font-size: clamp(0.85rem, 4vw, 1rem);
+        
+    }
+    
+    #breathe-btn{
+        
+        /* display: block; */
+        font-size: clamp(0.875rem, 1.5vw, 1.125rem); 
+        padding: clamp(0.6rem, 1.5vw, 1rem) clamp(1.2rem, 3vw, 2rem);
+        border-radius: clamp(4px, 1vw, 8px);
+        
+        /* margin-top: 1rem; */
+
+        border: 1px solid #A9C7E8;
+        background-color: #A9C7E8;
+        color: #F7F8FB;
+
+        /* padding: 0 1rem; */
+        /* border-radius: 10px; */
+
+        /* font-weight: bold; */
+    }
+   
+    #menu-btn{
+        display: flex;
+        /* transition: 0.4s ease; */
+        width:  clamp(16px,6vw,1.5rem);
+        height:  clamp(16px,6vw,1.5rem);
+        
+       
+        
+    }
+    
+    #menu-btn.active{
+        
+        right :210px;
+    }
+    
+    #menu-btn span{ 
+     transition: 0.4s ease;
+    }
+
+}
+@media (max-width: 575px){
+    #logoname{
+        display: none;
+    }
+
+    
+}
+@media (max-width: 415px) {
+    #brand{
+        position: relative;
+        right: 30px;
+        
+        
+    }
+    
+}
+
