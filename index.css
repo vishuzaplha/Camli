@@ -67,7 +67,9 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     justify-content: center;
+    align-content: center;
     transition: 400ms;
+    margin: 1.5rem 0 2.5rem 0;
 }
 
 .hero-compo {
@@ -140,7 +142,7 @@ a {
 }
 
 #image-area {
-    background-image: url("image/hero-meditation.png");
+    background-image: url("image/hero-meditation.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -223,7 +225,7 @@ a {
     font-size: clamp(1.5rem, 6vw, 2.5rem);
     font-weight: 600;
     text-align: center;
-    /* margin-top: 4rem;    */
+    margin-top: 7rem;   
     margin-bottom: 1rem;
     color: #4F5B66;
     transition: 400ms;
@@ -284,12 +286,12 @@ a {
 }
 
 /* Light Mode Card Asset Paths */
-.blog-img-1, #midnight-reset { background-image: url("image/12amreset.png"); }
-.blog-img-2 { background-image: url("image/breathe-blog-img.png"); }
-.blog-img-3 { background-image: url("image/light-mode-focus.png"); }
-.blog-img-4 { background-image: url("image/emotional-balance-img.png"); }
-.blog-img-5 { background-image: url("image/optimistic-blog-img.png"); }
-.blog-img-6 { background-image: url("image/unknown-emotions-img.png"); }
+.blog-img-1, #midnight-reset { background-image: url("image/12amreset.webp"); }
+.blog-img-2 { background-image: url("image/breathe-blog-img.webp"); }
+.blog-img-3 { background-image: url("image/light-mode-focus.webp"); }
+.blog-img-4 { background-image: url("image/emotional-balance-img.webp"); }
+.blog-img-5 { background-image: url("image/optimistic-blog-img.webp"); }
+.blog-img-6 { background-image: url("image/unknown-emotions-img.webp"); }
 
 .blog-card-content {
     padding: 20px;
@@ -478,6 +480,7 @@ a {
 .about-camli,.about-compos{
     background-color: #F7F8FB;
     transition: 400ms;
+    margin-bottom: 3rem;
 }
 
 /* first head */
@@ -486,7 +489,7 @@ a {
     font-size: clamp(0.70rem, 1vw, 1rem);
     font-weight: 600;
     text-align: center;
-    /* margin-top: 4rem;    */
+    margin-top: 7rem;   
     margin-bottom: 1rem;
     color: #4F5B66;
     transition: 400ms;

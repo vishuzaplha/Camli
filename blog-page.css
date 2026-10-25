@@ -297,15 +297,15 @@ body.dark-mode.journal-page .soft-section {
 /* ==========================================
    6. BACKGROUND IMAGES
    ========================================== */
-.blog-img-7 { background-image: url("image/INTERNET&MIND.png"); }
-.blog-img-8 { background-image: url("image/LOSING-INTEREST.png"); }
-.blog-img-9 { background-image: url("image/MINDROT.png"); }
-.blog-img-10 { background-image: url("image/ambient-music.png"); }
-.blog-img-11 { background-image: url("image/satisfying-visuals.png"); }
-.blog-img-12 { background-image: url("image/tools&mood.png"); }
-.blog-img-13 { background-image: url("image/switch-mood.png"); }
-.blog-img-14 { background-image: url("image/dopamine-reset.png"); }
-.blog-img-15 { background-image: url("image/camli&peace.png"); }
+.blog-img-7 { background-image: url("image/INTERNET&MIND.webp"); }
+.blog-img-8 { background-image: url("image/LOSING-INTEREST.webp"); }
+.blog-img-9 { background-image: url("image/MINDROT.webp"); }
+.blog-img-10 { background-image: url("image/ambient-music.webp"); }
+.blog-img-11 { background-image: url("image/satisfying-visuals.webp"); }
+.blog-img-12 { background-image: url("image/tools&mood.webp"); }
+.blog-img-13 { background-image: url("image/switch-mood.webp"); }
+.blog-img-14 { background-image: url("image/dopamine-reset.webp"); }
+.blog-img-15 { background-image: url("image/camli&peace.webp"); }
 
 /* ==========================================
    7. MEDIA QUERIES

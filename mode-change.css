@@ -109,7 +109,7 @@ body.dark-mode .faq-answers p {
 }
 
 body.dark-mode #image-area {
-    background-image: url("image/hero-meditation-dark.png");
+    background-image: url("image/hero-meditation-dark.webp");
 }
 
 body.dark-mode .main-tools {
@@ -149,21 +149,21 @@ body.dark-mode .faq-accordian.active .faq-icon {
 }
 
 /* Dark blog artwork */
-body.dark-mode .blog-img-1, body.dark-mode #midnight-reset { background-image: url("image/dark-mode-12-Photoroom.png"); }
-body.dark-mode .blog-img-2 { background-image: url("image/dark-mode-breathe-Photoroom.png"); }
-body.dark-mode .blog-img-3 { background-image: url("image/dark-mode-focus-Photoroom.png"); }
-body.dark-mode .blog-img-4 { background-image: url("image/dark-mode-handle-Photoroom.png"); }
-body.dark-mode .blog-img-5 { background-image: url("image/dark-mode-optimistic-Photoroom.png"); }
-body.dark-mode .blog-img-6 { background-image: url("image/dark-mode-unknown-Photoroom.png"); }
-body.dark-mode .blog-img-7 { background-image: url("image/DARK-INTERNET&MIND.png"); }
-body.dark-mode .blog-img-8 { background-image: url("image/DARK-LOSING-INTEREEST.png"); }
-body.dark-mode .blog-img-9 { background-image: url("image/DARK-MINDROT.png"); }
-body.dark-mode .blog-img-10 { background-image: url("image/dark-mode-ambient-sound.png"); }
-body.dark-mode .blog-img-11 { background-image: url("image/satisfying-visuals-dark-mode.png"); }
-body.dark-mode .blog-img-12 { background-image: url("image/dark-mode-tools&mood.png"); }
-body.dark-mode .blog-img-13 { background-image: url("image/dark-mode-switch-mood.png"); }
-body.dark-mode .blog-img-14 { background-image: url("image/dark-mode-dopamine-reset.png"); }
-body.dark-mode .blog-img-15 { background-image: url("image/dark-mode-camli&peace.png"); }
+body.dark-mode .blog-img-1, body.dark-mode #midnight-reset { background-image: url("image/dark-mode-12-Photoroom.webp"); }
+body.dark-mode .blog-img-2 { background-image: url("image/dark-mode-breathe-Photoroom.webp"); }
+body.dark-mode .blog-img-3 { background-image: url("image/dark-mode-focus-Photoroom.webp"); }
+body.dark-mode .blog-img-4 { background-image: url("image/dark-mode-handle-Photoroom.webp"); }
+body.dark-mode .blog-img-5 { background-image: url("image/dark-mode-optimistic-Photoroom.webp"); }
+body.dark-mode .blog-img-6 { background-image: url("image/dark-mode-unknown-Photoroom.webp"); }
+body.dark-mode .blog-img-7 { background-image: url("image/DARK-INTERNET&MIND.webp"); }
+body.dark-mode .blog-img-8 { background-image: url("image/DARK-LOSING-INTEREEST.webp"); }
+body.dark-mode .blog-img-9 { background-image: url("image/DARK-MINDROT.webp"); }
+body.dark-mode .blog-img-10 { background-image: url("image/dark-mode-ambient-sound.webp"); }
+body.dark-mode .blog-img-11 { background-image: url("image/satisfying-visuals-dark-mode.webp"); }
+body.dark-mode .blog-img-12 { background-image: url("image/dark-mode-tools&mood.webp"); }
+body.dark-mode .blog-img-13 { background-image: url("image/dark-mode-switch-mood.webp"); }
+body.dark-mode .blog-img-14 { background-image: url("image/dark-mode-dopamine-reset.webp"); }
+body.dark-mode .blog-img-15 { background-image: url("image/dark-mode-camli&peace.webp"); }
 
 /* Blog listing page */
 body.dark-mode .blog-hero {
