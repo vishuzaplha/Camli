@@ -632,6 +632,58 @@ async function init() {
    NAVBAR / MODE LOADING
    ========================================================= */
 
+   
+   function loadComponent(file, containerID, callback){
+       fetch(file)
+       .then(res =>res.text())
+       .then(data =>{
+           document.getElementById(containerID).innerHTML = data;
+
+    if(callback){
+      callback();
+    }
+})
+}
+
+
+loadComponent("mode-changer.html","mode-changer",() => {
+   
+
+  const toggleBtn = document.getElementById("theme-toggle");
+  const mobileToggleBtn = document.getElementById("theme-toggle-mobile");
+  
+  
+  // THEME FUNCTION
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+    
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      if (toggleBtn) toggleBtn.textContent = "☀️";
+      if (mobileToggleBtn) mobileToggleBtn.textContent = "LIGHT MODE ☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        if (toggleBtn) toggleBtn.textContent = "🌙";
+        if (mobileToggleBtn) mobileToggleBtn.textContent = "DARK MODE 🌙";
+    }
+}
+
+// DESKTOP BUTTON
+toggleBtn.addEventListener("click", toggleTheme);
+
+// MOBILE BUTTON
+  mobileToggleBtn.addEventListener("click", toggleTheme);
+  
+  // LOAD SAVED THEME
+  const savedTheme = localStorage.getItem("theme");
+  
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    if (toggleBtn) toggleBtn.textContent = "☀️";
+    if (mobileToggleBtn) mobileToggleBtn.textContent = "LIGHT MODE ☀️";
+  }
+})
+
 async function loadSharedFragments() {
 
     const jobs = [];
@@ -737,7 +789,7 @@ function applySavedThemeFallback() {
 
         const saved =
             localStorage.getItem(
-                "camliTheme"
+                "theme"
             );
 
 
@@ -759,17 +811,16 @@ function applySavedThemeFallback() {
         }
 
     } catch (_) {}
+    
 
+    
 }
-
-
-
 /* =========================================================
    EVENTS
    ========================================================= */
 
 function bindEvents() {
-
+    
 
     document.addEventListener(
         "click",

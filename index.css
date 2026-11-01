@@ -69,12 +69,13 @@ a {
     justify-content: center;
     align-content: center;
     transition: 400ms;
-    margin: 1.5rem 0 2.5rem 0;
+    padding: 1.5rem 0 2.5rem 0;
 }
 
 .hero-compo {
     min-height: clamp(20rem, 84vw, 35rem);
     width: 100%;
+    transition: 400ms;
 }
 
 #text-area {
@@ -142,15 +143,27 @@ a {
 }
 
 #image-area {
-    background-image: url("image/hero-meditation.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    position: relative;
     height: 50vh;
     transition: 400ms;
 }
+#image-area img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+   
+}
 
 /* --- TOOLS SECTION (SOLID PASTEL ENGINE) --- */
+#parent-tool-sec{
+    transition: 400ms;
+     background-color: #F7F8FB;
+}
 #tools-section {
     display: flex;
     justify-content: space-evenly;
@@ -158,6 +171,8 @@ a {
     /* margin-top: 4rem; */
     padding: 0 1rem;
     padding-bottom: clamp(10px, 2vw, 12px);
+    background-color: #F7F8FB;
+    transition: 400ms;
 }
 
 .tool-item {
@@ -221,12 +236,11 @@ a {
 
 /* --- HEADINGS --- */
 .section-heads {
-    /* padding-top: clamp(40px, 2vw, 12px); */
+    padding-top: clamp(11rem, 9vw, 3rem);
     font-size: clamp(1.5rem, 6vw, 2.5rem);
     font-weight: 600;
     text-align: center;
-    margin-top: 7rem;   
-    margin-bottom: 1rem;
+    
     color: #4F5B66;
     transition: 400ms;
 }
@@ -241,6 +255,11 @@ a {
 }
 
 /* --- THE RESPONSIVE BLOG GRID LAYOUT --- */
+.blog-section-wrapper{
+    background-color: #F7F8FB;
+    transition: 400ms;
+    /* padding: 4rem 0; */
+}
 .blog-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -248,11 +267,12 @@ a {
     max-width: 1200px;
     margin: clamp(1.5rem, 6vw, 2.5rem) auto;
     margin-bottom: 0px;
-    padding: 15px;
+    
     box-sizing: border-box;
     /* transition: 4s; */
     transition: 400ms;
     /* border: 2px solid red; */
+     
 }    
 
 .blog-card {
@@ -347,7 +367,7 @@ a {
 
 /* --- INTERACTIVE STRUCTURAL LAYERS --- */
 #page-content {
-    transition: filter 0.3s ease;
+    transition: filter 400ms ease;
     display: flex;
     flex-direction: column;
     padding-top: 6rem;
@@ -480,17 +500,15 @@ a {
 .about-camli,.about-compos{
     background-color: #F7F8FB;
     transition: 400ms;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* first head */
 .about-heads{
-    /* padding-top: clamp(40px, 2vw, 12px); */
+    padding-top: clamp(11rem, 9vw, 3rem);
     font-size: clamp(0.70rem, 1vw, 1rem);
     font-weight: 600;
     text-align: center;
-    margin-top: 7rem;   
-    margin-bottom: 1rem;
     color: #4F5B66;
     transition: 400ms;
 

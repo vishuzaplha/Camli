@@ -97,7 +97,10 @@ body.dark-mode #hero-more {
 
 /* Home page */
 body.dark-mode #hero-section,
-body.dark-mode .faq-sec {
+body.dark-mode .faq-sec,
+body.dark-mode #tools-section,
+body.dark-mode #parent-tool-sec,
+body.dark-mode .blog-section-wrapper{
     background-color: #0F1724;
 }
 
@@ -109,8 +112,9 @@ body.dark-mode .faq-answers p {
 }
 
 body.dark-mode #image-area {
-    background-image: url("image/hero-meditation-dark.webp");
+    transition: 400ms;
 }
+
 
 body.dark-mode .main-tools {
     background-color: #1B2536;
